@@ -9,15 +9,15 @@ class Email
 
 
     public $email;
-    public $nombre;
+    public $name;
     public $token;
 
 
-    public function __construct($email, $nombre, $token)
+    public function __construct($email, $name, $token)
     {
 
         $this->email = $email;
-        $this->nombre = $nombre;
+        $this->name = $name;
         $this->token = $token;
     }
 
@@ -44,7 +44,7 @@ class Email
 
 
         $contenido = "<html>";
-        $contenido .= "<p><strong>Hola " . $this->nombre . "</strong> haz creado tu cuenta en App salon solo debes confirmarla presionanado el siguiente enlace</p>";
+        $contenido .= "<p><strong>Hola " . $this->name . "</strong> haz creado tu cuenta en App salon solo debes confirmarla presionanado el siguiente enlace</p>";
         $contenido .= "<p>Presiona Aqui:<a href='".$_ENV['APP_URL']."/verify?token=" . $this->token . "'>Confirma Tu Cuenta</a></p>";
         $contenido .= "<p>Si tu no solicitaste esta cuenta puedes ignarar este mensaje</p>";
         $contenido .= "</html>";
@@ -83,7 +83,7 @@ class Email
 
 
         $contenido = "<html>";
-        $contenido .= "<p><strong>Hola " . $this->nombre . "</strong> haz solicitado la recuperacion de tu Password</p>";
+        $contenido .= "<p><strong>Hola " . $this->name . "</strong> haz solicitado la recuperacion de tu Password</p>";
         $contenido .= "<p>Presiona el siguiente enlace para recuperar tu password:<a href='".$_ENV['APP_URL']."/recover?token=" . $this->token . "'>Restablecer Password</a></p>";
         $contenido .= "<p>Si tu no solicitaste recuperar tu password puedes ignarar este mensaje</p>";
         $contenido .= "</html>";
