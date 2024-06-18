@@ -1,0 +1,21 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+
+
+.verify{
+
+    margin-top: 5rem;
+    .uptask{
+        
+        @include m.title(v.$indigo);
+
+       
+    }
+    .actions{
+        justify-content: center;
+        a{
+            color: v.$indigo;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+
+.forgot{
+    margin-top: 5rem;
+    .uptask{
+        @include m.title(v.$rosa);
+
+    }
+
+
+    input[type="submit"]{
+        @include m.boton(v.$rosa,v.$blanco);
+    }
+
+    .actions{
+        a{
+            color: v.$rosa;
+        }
+    }
+
+}

@@ -1,0 +1,25 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+
+
+.recover{
+
+    margin-top: 5rem;
+    .uptask{
+        
+        @include m.title(v.$azul);
+
+       
+    }
+
+    input[type="submit"]{
+        @include m.boton(v.$azul,v.$blanco);
+    }
+
+    .actions{
+        a{
+            color: v.$azul;
+        }
+    }
+}

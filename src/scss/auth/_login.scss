@@ -1,0 +1,22 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+
+
+.login{
+
+    margin-top: 5rem;
+    .uptask{
+        @include m.title(v.$cyan);
+    }
+
+    input[type="submit"]{
+        @include m.boton(v.$cyan,v.$blanco);
+    }
+
+    .actions{
+        a{
+            color: v.$cyan;
+        }
+    }
+}
