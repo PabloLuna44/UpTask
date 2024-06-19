@@ -22,12 +22,14 @@ $router->post('/forgot',[LoginController::class,'forgot']);
 
 //-------------------------RECOVER PASSWORD---------------------||
 $router->get('/recover',[LoginController::class,'recover']);
-$router->post('/revover',[LoginController::class,'recover']);
+$router->post('/recover',[LoginController::class,'recover']);
 
 //-----------------------VERIFY ACCOUNT-------------------------||
 $router->get('/message',[LoginController::class,'message']);
 $router->get('/verify',[LoginController::class,'verify']);
 
+
+$router->get('/dashboard',[LoginController::class,'dashboard']);
 
 
 

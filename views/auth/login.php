@@ -1,14 +1,15 @@
 <div class="container login">
 
   <?php    include_once __DIR__ . '/../templates/name-page.php'     ?>
+
     <div class="container-sm">
         <p class="description-page">Login</p>
-
+        <?php    include_once __DIR__ . '/../templates/alerts.php'     ?>
         <form class="form" method="POST" action="/">
 
         <div class="field">
             <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Email" name="Email">
+            <input type="email" id="email" placeholder="Email" name="email">
         </div>
 
         <div class="field">
