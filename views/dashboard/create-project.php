@@ -8,7 +8,7 @@ require_once __DIR__ . '/header-dashboard.php';
     require_once __DIR__ . '/../templates/alerts.php';
     ?>
 
-    <form class="form">
+    <form class="form" method="POST">
 
         <?php
         require_once __DIR__ . '/form-project.php';

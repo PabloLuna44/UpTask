@@ -32,6 +32,7 @@ $router->get('/verify',[LoginController::class,'verify']);
 //-------------------------DASHBOARD-----------------------------||
 $router->get('/dashboard',[DashboardController::class,'index']);
 $router->get('/create-project',[DashboardController::class,'create']);
+$router->post('/create-project',[DashboardController::class,'create']);
 $router->get('/profile',[DashboardController::class,'profile']);
 
 
