@@ -1,0 +1,42 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.bar{
+    
+    background-color: v.$blanco;
+    padding: 1rem 2rem;
+    box-shadow: 1px 12px 9px -13px rgba(0,0,0,.5);
+
+
+    @include m.tablet{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    a{
+        text-decoration: none;
+        color: v.$grisOscuro;
+
+
+
+        &:hover{
+            color: v.$indigo;    
+        }
+
+    }
+
+    p{
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: v.$grisOscuro;
+
+
+        span{
+            color: v.$indigo;
+        }
+    }
+
+}

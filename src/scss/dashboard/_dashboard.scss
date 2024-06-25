@@ -1,0 +1,44 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.dashboard {
+  background-color: v.$grisClaro;
+
+  @include m.tablet {
+    display: flex;
+    height: 100vh;
+  }
+
+  .main {
+    flex: 1;
+  }
+
+  .content {
+
+    padding: 2rem;
+
+    .name-page {
+      font-size: 3rem;
+      text-align: center;
+    }
+  }
+
+
+  .form{
+
+    input:not([type="submit"]){
+      background-color: v.$blanco;
+    }
+
+    input[type="submit"]{
+        @include m.boton(v.$indigo, v.$blanco);
+
+        font-size: 1.5rem;
+        border-radius: .5rem;
+    }
+
+
+  }
+
+
+}

@@ -31,7 +31,7 @@ class LoginController
                         $_SESSION['name'] = $auth->name;
                         $_SESSION['login'] = true;
 
-                        dd($_SESSION);
+                        header('Location:/dashboard');
                         
                     } else {
                         User::setAlerta('error', 'Password Incorrect or Email Incorrect');
@@ -52,12 +52,14 @@ class LoginController
     }
 
 
-
     //method to logout page 
-    public static function logout()
+    public static function logout(Router $router)
     {
-
-        echo "Desde Login";
+        
+        session_start();
+        $_SESSION = [];
+        
+        header('Location:/');
     }
 
     //method to create account
